@@ -1,5 +1,6 @@
 // src/pages/ProjectsPage.tsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FolderOpen,
   Calendar,
@@ -17,10 +18,15 @@ import {
   Plus,
 } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import DashboardLayout from "@/components/admin/DashboardLayout";
+import { ApiErrorBoundary } from "@/components/error/ApiErrorBoundary";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+
 
 const ProjectsPage = () => {
   const [activeTab, setActiveTab] = useState("all");
-
+  const navigate = useNavigate();
   const projects: any[] = [];
 
   const tabs = [
@@ -51,10 +57,16 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <div className="space-y-8">
+      <div className="space-y-6 pt-16">
         {/* Header Section */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-white/20">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+            <div>
+            <Button variant="outline" onClick={() => navigate("/employer/dashboard")}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Dashboard
+            </Button>
+            </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-800 mb-2">
                 Project Management
