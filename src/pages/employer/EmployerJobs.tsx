@@ -196,36 +196,6 @@ const EmployerJobs = () => {
             </div>
           </div>
 
-          {/* Recent Job Listings */}
-          <div className="mb-8">
-            <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <CardHeader className="border-b border-gray-100/80 bg-gradient-to-r from-blue-50 to-cyan-50">
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="bg-gradient-to-br from-blue-500 to-cyan-600 p-3 rounded-xl mr-4 shadow-lg group-hover:scale-105 transition-transform duration-200">
-                      <Briefcase className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-bold text-gray-800">
-                        Recent Job Listings
-                      </h2>
-                      <p className="text-sm text-gray-600 mt-1">
-                        Last 5 postings
-                      </p>
-                    </div>
-                  </div>
-                  <button className="flex items-center bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-2 rounded-full text-sm font-medium transition-colors duration-200">
-                    <PlusCircle className="h-4 w-4 mr-2" />
-                    Add New
-                  </button>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <JobListingsTable limit={5} />
-              </CardContent>
-            </Card>
-          </div>
-
           {/* Navigation & Search */}
           <div className="bg-white/70 backdrop-blur-xl rounded-2xl border border-white/50 shadow-xl p-6">
             <div className="flex flex-col lg:flex-row justify-between gap-6">

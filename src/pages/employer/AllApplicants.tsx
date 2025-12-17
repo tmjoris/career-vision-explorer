@@ -41,34 +41,6 @@ const AllApplicants = () => {
       <ApiErrorBoundary>
         <DashboardLayout title="All Applicants" role="employer">
           <div className="space-y-6">
-            {/* Recent Applications */}
-            <div className="mb-8">
-              <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <CardHeader className="border-b border-gray-100/80 bg-gradient-to-r from-green-50 to-emerald-50">
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <div className="bg-gradient-to-br from-green-500 to-emerald-600 p-3 rounded-xl mr-4 shadow-lg group-hover:scale-105 transition-transform duration-200">
-                        <Users className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h2 className="text-lg font-bold text-gray-800">
-                          Recent Applications
-                        </h2>
-                        <p className="text-sm text-gray-600 mt-1">
-                          Latest submissions
-                        </p>
-                      </div>
-                    </div>
-                    <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                      New
-                    </div>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <RecentApplicantsTable />
-                </CardContent>
-              </Card>
-            </div>
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-2xl font-bold mt-4">All Applicants</h1>
